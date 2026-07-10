@@ -16,6 +16,26 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .save-the-date {
   position: relative;
   min-height: 100dvh;
@@ -32,6 +52,7 @@ body {
   display: block;
   pointer-events: none;
   z-index: 0;
+  animation: fade-in 1.6s ease both;
 }
 
 .content {
@@ -51,6 +72,7 @@ body {
   width: min(92vw, 34rem);
   height: auto;
   pointer-events: none;
+  animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
 }
 
 .calendar-cta {
@@ -58,6 +80,7 @@ body {
   justify-content: center;
   width: min(72vw, 22rem);
   margin-top: 1.25rem;
+  animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.9s both;
 }
 
 .calendar-ios-link {
@@ -86,6 +109,8 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   -webkit-tap-highlight-color: transparent;
+  transition: color 0.35s ease, border-color 0.35s ease,
+    background-color 0.35s ease, transform 0.2s ease, box-shadow 0.35s ease;
 }
 
 html.ios .calendar-ios-link {
@@ -112,6 +137,13 @@ html.ios .calendar-cta {
   );
   color: #a69e90;
   outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -8px rgba(92, 84, 63, 0.4);
+}
+
+.calendar-ios-link:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 0.1s;
 }
 
 .site-version {
@@ -127,6 +159,7 @@ html.ios .calendar-cta {
   letter-spacing: 0.08em;
   pointer-events: none;
   user-select: none;
+  animation: fade-in 1.5s ease 1.6s both;
 }
 
 @media (min-width: 768px) {
@@ -141,5 +174,24 @@ html.ios .calendar-cta {
   .calendar-cta {
     width: min(50vw, 20rem);
     margin-top: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background,
+  .text-overlay,
+  .calendar-cta,
+  .site-version {
+    animation: none;
+  }
+
+  .calendar-ios-link {
+    transition: none;
+  }
+
+  .calendar-ios-link:hover,
+  .calendar-ios-link:focus-visible,
+  .calendar-ios-link:active {
+    transform: none;
   }
 }

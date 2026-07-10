@@ -35,6 +35,18 @@
     rgba(255, 255, 255, 0.28) 100%
   );
   backdrop-filter: blur(1px);
+  transition: color 0.35s ease, border-color 0.35s ease,
+    background-color 0.35s ease, background-image 0.35s ease,
+    transform 0.2s ease, box-shadow 0.35s ease;
+}
+
+.atcb-button:not([disabled]):hover {
+  transform: translateY(-1px);
+}
+
+.atcb-button:not([disabled]):active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 0.1s;
 }
 
 .atcb-button:not([disabled]):focus,
