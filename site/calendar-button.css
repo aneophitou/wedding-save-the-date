@@ -1,0 +1,51 @@
+@import url("https://cdn.jsdelivr.net/npm/add-to-calendar-button@2/assets/css/atcb.css");
+
+:host {
+  --font: "Helvetica Neue", Arial, sans-serif;
+  --btn-background: rgba(251, 251, 243, 0.55);
+  --btn-hover-background: rgba(251, 251, 243, 0.75);
+  --btn-border: rgba(188, 181, 167, 0.55);
+  --btn-hover-border: rgba(188, 181, 167, 0.75);
+  --btn-border-radius: 999px;
+  --btn-padding-x: 2.8em;
+  --btn-padding-y: 0.85em;
+  --btn-font-weight: 300;
+  --btn-text: #bcb5a7;
+  --btn-hover-text: #a69e90;
+  --btn-shadow: none;
+  --btn-hover-shadow: none;
+  --btn-active-shadow: none;
+  --list-background: #fbfbf3;
+  --list-hover-background: #f3f1e8;
+  --list-text: #5c543f;
+  --list-hover-text: #4a4433;
+  --list-border-radius: 12px;
+}
+
+.atcb-button {
+  max-width: none;
+  min-width: 16rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(210, 210, 210, 0.12) 45%,
+    rgba(255, 255, 255, 0.28) 100%
+  );
+  backdrop-filter: blur(1px);
+}
+
+.atcb-button:not([disabled]):focus,
+.atcb-button:not([disabled]):hover,
+.atcb-button.atcb-active:not(.atcb-modal-style, .atcb-dropoverlay),
+.atcb-button.atcb-single:not([disabled]):focus,
+.atcb-button.atcb-single:not([disabled]):hover {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(210, 210, 210, 0.16) 45%,
+    rgba(255, 255, 255, 0.38) 100%
+  );
+}
