@@ -82,55 +82,117 @@ body {
   padding: 1.5rem 1rem;
 }
 
-.text-overlay {
-  display: block;
+/* Title artwork — proportions derived from text.svg (524.25 × 246) */
+.title-block {
+  position: relative;
   width: min(92vw, 34rem);
-  height: auto;
-  pointer-events: none;
+  aspect-ratio: 524.25 / 246;
+  container-type: inline-size;
+  color: #3d4030;
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
 }
 
-.title-el {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: #c1c5b3;
-  width: min(92vw, 34rem);
+.title-aside {
+  position: absolute;
+  top: 3.1%;
+  left: 8.2%;
+  max-width: 34%;
+  text-align: left;
 }
 
-.title-el-names {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 400;
-  font-size: clamp(2.1rem, 9vw, 4rem);
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-}
-
-.title-el-std {
-  margin-top: 1.1rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+.title-location,
+.title-followup {
+  margin: 0;
+  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
+  font-size: 1.95cqw;
+  line-height: 1.15;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
-  font-size: clamp(0.7rem, 2.6vw, 1rem);
-  letter-spacing: 0.36em;
+  color: #3d4030;
 }
 
-.title-el-date {
-  margin-top: 0.75rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1rem, 3.6vw, 1.4rem);
-  letter-spacing: 0.08em;
+.title-followup {
+  margin-top: 0.55em;
+  letter-spacing: 0.22em;
 }
 
-/* Show the title variant that matches the active language. */
-html.lang-el .text-overlay {
-  display: none;
+.title-main {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-html.lang-el .title-el {
-  display: flex;
-  animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
+.title-date {
+  position: absolute;
+  top: 16.4%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-family: "Kulachat Serif", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 15.3cqw;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #d3d6c8;
+}
+
+.title-std {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-family: "Parfumerie Script", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-size: 14.2cqw;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #7c3342;
+  white-space: nowrap;
+}
+
+.title-names {
+  position: absolute;
+  top: 75.6%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-family: "Simple Serenity Script", "Segoe Script", cursive;
+  font-weight: 400;
+  font-size: 4.1cqw;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #3d4030;
+}
+
+/* Greek: script faces lack Greek glyphs — use elegant serif fallbacks */
+html.lang-el .title-std {
+  top: 47%;
+  font-family: "Parfumerie Script", "GFS Didot", "Times New Roman", serif;
+  font-size: 8.5cqw;
+  letter-spacing: 0.02em;
+  white-space: normal;
+  padding: 0 4%;
+}
+
+html.lang-el .title-names {
+  top: 72%;
+  font-family: "Simple Serenity Script", "GFS Didot", Georgia, serif;
+  font-size: 5.2cqw;
+}
+
+html.lang-el .title-location,
+html.lang-el .title-followup {
+  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.18em;
+}
+
+html.lang-el .title-aside {
+  max-width: 38%;
 }
 
 .calendar-cta {
@@ -160,7 +222,7 @@ html.lang-el .title-el {
   );
   backdrop-filter: blur(1px);
   color: #bcb5a7;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.22em;
@@ -225,7 +287,7 @@ html.ios .calendar-cta {
     padding: 2.5rem 2rem;
   }
 
-  .text-overlay {
+  .title-block {
     width: min(80vw, 40rem);
   }
 
@@ -237,17 +299,12 @@ html.ios .calendar-cta {
 
 @media (prefers-reduced-motion: reduce) {
   .background,
-  .text-overlay,
-  .title-el,
+  .title-block,
   .calendar-cta,
   .site-version {
     animation: none;
     clip-path: none;
     opacity: 1;
-  }
-
-  html.lang-el .title-el {
-    animation: none;
   }
 
   .calendar-ios-link {

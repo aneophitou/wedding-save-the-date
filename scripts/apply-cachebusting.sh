@@ -2,12 +2,10 @@
 set -euo pipefail
 
 CACHE_VERSION="${1:-$(git rev-parse --short HEAD)}"
-TARGET="site/index.html"
 
-if [[ ! -f "$TARGET" ]]; then
-  echo "Missing $TARGET" >&2
-  exit 1
-fi
+while IFS= read -r -d '' file; do
+  sed -i "s/__CACHE_VERSION__/${CACHE_VERSION}/g" "$file"
+  echo "Applied cache busting to ${file}"
+done < <(find site -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -print0)
 
-sed -i "s/__CACHE_VERSION__/${CACHE_VERSION}/g" "$TARGET"
-echo "Applied cache busting version: ${CACHE_VERSION}"
+echo "Cache busting version: ${CACHE_VERSION}"

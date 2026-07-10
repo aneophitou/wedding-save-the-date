@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/add-to-calendar-button@2/assets/css/atcb.css");
 
 :host {
-  --font: "Helvetica Neue", Arial, sans-serif;
+  --font: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   --btn-background: rgba(251, 251, 243, 0.55);
   --btn-hover-background: rgba(251, 251, 243, 0.75);
   --btn-border: rgba(188, 181, 167, 0.55);

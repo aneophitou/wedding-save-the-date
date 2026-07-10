@@ -1,0 +1,71 @@
+/* Wedding title fonts — add licensed woff2 files to assets/fonts/ */
+@font-face {
+  font-family: "Quicksand";
+  src: url("assets/fonts/quicksand-latin-300-normal.woff2?v=__CACHE_VERSION__")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("assets/fonts/quicksand-latin-400-normal.woff2?v=__CACHE_VERSION__")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Simple Serenity Script";
+  src:
+    local("Simple Serenity Script"),
+    local("SimpleSerenity-Script"),
+    url("assets/fonts/simple-serenity-script.woff2?v=__CACHE_VERSION__")
+      format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Parfumerie Script";
+  src:
+    local("Parfumerie Script Pro"),
+    local("Parfumerie Script"),
+    url("assets/fonts/parfumerie-script.woff2?v=__CACHE_VERSION__")
+      format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kulachat Serif";
+  src:
+    local("Kulachat Serif"),
+    local("KulachatSerif-Regular"),
+    url("assets/fonts/kulachat-serif-regular.woff2?v=__CACHE_VERSION__")
+      format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Greek glyphs for script/serif fallbacks when custom faces lack them */
+@font-face {
+  font-family: "GFS Didot";
+  src: url("assets/fonts/gfs-didot-greek-400-normal.woff2?v=__CACHE_VERSION__")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0370-03FF;
+}
