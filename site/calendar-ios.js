@@ -1,28 +1,41 @@
-function isIosDevice() {
-  return (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
-  );
+var ICS_HTTPS_URL = 'https://wedding.neophitou.com/AndreasAndNikoletaWedding.ics';
+var ICS_WEBCAL_URL = 'webcal://wedding.neophitou.com/AndreasAndNikoletaWedding.ics';
+
+function isSafariIos() {
+  return /^((?!chrome|android|crios|fxios|edgios|brave).)*safari/i.test(navigator.userAgent);
 }
 
-function enableIosCalendarLink() {
-  if (!isIosDevice()) {
+function removeWebComponent() {
+  var webComponent = document.querySelector('add-to-calendar-button');
+  if (webComponent) {
+    webComponent.remove();
+  }
+}
+
+function openIosCalendar(event) {
+  event.preventDefault();
+
+  var targetUrl = isSafariIos() ? ICS_HTTPS_URL : ICS_WEBCAL_URL;
+  window.location.assign(targetUrl);
+}
+
+function initIosCalendarLink() {
+  if (!document.documentElement.classList.contains('ios')) {
     return;
   }
 
-  const webComponent = document.querySelector('add-to-calendar-button');
-  const iosLink = document.getElementById('calendar-ios-link');
+  removeWebComponent();
 
-  if (!webComponent || !iosLink) {
+  var iosLink = document.getElementById('calendar-ios-link');
+  if (!iosLink) {
     return;
   }
 
-  webComponent.hidden = true;
-  iosLink.hidden = false;
+  iosLink.addEventListener('click', openIosCalendar);
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', enableIosCalendarLink);
+  document.addEventListener('DOMContentLoaded', initIosCalendarLink);
 } else {
-  enableIosCalendarLink();
+  initIosCalendarLink();
 }
