@@ -41,7 +41,7 @@ def main() -> None:
         image.save(out_path, format="WEBP", quality=82, method=6)
         total_after += out_path.stat().st_size
 
-        return f'xlink:href="bg-images/{file_name}"'
+        return f'xlink:href="/assets/bg-images/{file_name}"'
 
     optimized_svg = PATTERN.sub(replace_match, svg)
     OUTPUT_SVG.write_text(optimized_svg, encoding="utf-8")
