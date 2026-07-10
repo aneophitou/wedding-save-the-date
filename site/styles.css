@@ -23,7 +23,6 @@ body {
   justify-content: center;
   min-height: 100dvh;
   padding: 1.5rem 1rem 2.5rem;
-  gap: 2rem;
 }
 
 .artwork {
@@ -50,15 +49,23 @@ body {
 }
 
 .calendar-cta {
+  position: absolute;
+  left: 50%;
+  bottom: 4.5%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  width: min(100%, 28rem);
-  margin-top: -0.5rem;
+  width: 62%;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
   .save-the-date {
-    gap: 2.5rem;
     padding: 2.5rem 2rem 3rem;
+  }
+
+  .calendar-cta {
+    width: 48%;
+    bottom: 5%;
   }
 }
