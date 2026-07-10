@@ -1,0 +1,12 @@
+{
+  "name": "wedding-save-the-date",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "optimize-background": "python scripts/optimize_background.py",
+    "generate-qr": "node scripts/generate-qr.mjs"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

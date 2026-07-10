@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andreas &amp; Nikoleta — Save the Date</title>
+  <meta name="description" content="Save the date for Andreas and Nikoleta's wedding on 11 July 2027.">
+  <meta property="og:title" content="Andreas &amp; Nikoleta — Save the Date">
+  <meta property="og:description" content="Join us on 11 July 2027. Tap to add to your calendar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wedding.neophitou.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+</head>
+<body>
+  <main class="save-the-date">
+    <div class="artwork" aria-hidden="true">
+      <img src="assets/background.svg" alt="" class="background" width="794" height="397" decoding="async">
+      <img src="assets/text.svg" alt="" class="text-overlay" width="699" height="328" decoding="async">
+    </div>
+
+    <section class="calendar-cta" aria-label="Add wedding to your calendar">
+      <add-to-calendar-button
+        name="Andreas and Nikoleta's Wedding"
+        description="Ceremony at the Church of Archangelos Michael in Archangelos.[br]Reception at Ktima Koushioumis."
+        startDate="2027-07-11"
+        startTime="18:00"
+        endDate="2027-07-12"
+        endTime="02:00"
+        timeZone="Europe/Nicosia"
+        location="Archangelou Michael"
+        options="'Apple','Google','iCal','Outlook.com','Microsoft365'"
+        icsFile="https://wedding.neophitou.com/AndreasAndNikoletaWedding.ics"
+        iCalFileName="AndreasAndNikoletaWedding"
+        buttonStyle="default"
+        lightMode="light"
+        size="5"
+        label="Add to Calendar"
+        styleLight="--btn-background: #5c543f; --btn-text: #fbfbf3; --btn-background-hover: #4a4433; --btn-border: #5c543f; --font: Georgia, 'Times New Roman', serif; --list-background: #fbfbf3; --list-text: #5c543f; --list-background-hover: #ebe8df;"
+      ></add-to-calendar-button>
+    </section>
+  </main>
+</body>
+</html>
