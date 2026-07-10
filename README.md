@@ -30,7 +30,13 @@ If you replace `Save The Date Assets/background.svg`:
 
 ```powershell
 python scripts/optimize_background.py
+python scripts/flatten_background.py
 ```
+
+`optimize_background.py` extracts the embedded rasters to
+`site/assets/bg-images/`. `flatten_background.py` then bakes the SVG's masking
+and 40% opacity into a single small `site/assets/background.webp` (~60 KB
+instead of ~2.1 MB), which the page loads directly for a fast first paint.
 
 ## GitHub Pages setup
 

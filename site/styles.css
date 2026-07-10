@@ -36,6 +36,20 @@ body {
   }
 }
 
+@keyframes bg-reveal {
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
 .save-the-date {
   position: relative;
   min-height: 100dvh;
@@ -50,9 +64,10 @@ body {
   height: 100%;
   border: 0;
   display: block;
+  object-fit: cover;
   pointer-events: none;
   z-index: 0;
-  animation: fade-in 1.6s ease both;
+  animation: bg-reveal 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 .content {
@@ -183,6 +198,8 @@ html.ios .calendar-cta {
   .calendar-cta,
   .site-version {
     animation: none;
+    clip-path: none;
+    opacity: 1;
   }
 
   .calendar-ios-link {
