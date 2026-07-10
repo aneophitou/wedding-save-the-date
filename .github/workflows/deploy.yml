@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Apply cache busting
+        run: bash scripts/apply-cachebusting.sh "$(git rev-parse --short HEAD)"
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
