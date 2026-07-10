@@ -22,7 +22,7 @@ npm install
 npm run generate-qr
 ```
 
-Outputs `qr-code.svg` and `qr-code.png` in the project root.
+Outputs `qr-code.svg` and `qr-code.png` in `site/assets/`.
 
 ## Re-optimize background images
 

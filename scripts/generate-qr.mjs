@@ -5,6 +5,7 @@ import QRCode from "qrcode";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, "..");
+const outputDir = join(rootDir, "site", "assets");
 const url = "https://wedding.neophitou.com";
 
 const options = {
@@ -20,9 +21,9 @@ const options = {
 const svg = await QRCode.toString(url, { ...options, type: "svg" });
 const pngBuffer = await QRCode.toBuffer(url, { ...options, type: "png" });
 
-writeFileSync(join(rootDir, "qr-code.svg"), svg, "utf8");
-writeFileSync(join(rootDir, "qr-code.png"), pngBuffer);
+writeFileSync(join(outputDir, "qr-code.svg"), svg, "utf8");
+writeFileSync(join(outputDir, "qr-code.png"), pngBuffer);
 
 console.log(`QR code generated for ${url}`);
-console.log("  qr-code.svg");
-console.log("  qr-code.png");
+console.log("  site/assets/qr-code.svg");
+console.log("  site/assets/qr-code.png");
