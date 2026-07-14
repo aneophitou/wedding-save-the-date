@@ -107,6 +107,14 @@
       textOverlay.setAttribute('alt', strings.imgAlt);
     }
 
+    var heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+      heroTitle.setAttribute(
+        'aria-label',
+        strings.names + ' — ' + strings.saveTheDateScript + ', ' + strings.date
+      );
+    }
+
     var nodes = document.querySelectorAll('[data-i18n]');
     for (var i = 0; i < nodes.length; i++) {
       var key = nodes[i].getAttribute('data-i18n');

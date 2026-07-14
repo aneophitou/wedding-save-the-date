@@ -83,22 +83,20 @@ body {
 }
 
 .text-overlay {
-  display: block;
-  width: min(92vw, 34rem);
-  height: auto;
-  pointer-events: none;
-  animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
+  display: none;
 }
 
-.title-el {
-  display: none;
+/* Hero title — layout matches text-no-button.svg (y: names 119, script 144, date 186, std 194) */
+.hero-title {
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: min(92vw, 34rem);
+  animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
 }
 
-.title-el-names {
+.hero-title-names {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   font-size: clamp(2.1rem, 9vw, 4rem);
@@ -107,7 +105,7 @@ body {
   color: #d3d6c8;
 }
 
-.title-el-script {
+.hero-title-script {
   margin-top: 0.55rem;
   font-family: "Parfumerie Script", "Segoe Script", "Brush Script MT", cursive;
   font-weight: 400;
@@ -117,8 +115,16 @@ body {
   color: #7c3342;
 }
 
-.title-el-std {
-  margin-top: 0.85rem;
+.hero-title-date {
+  margin-top: 1.15rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 3.6vw, 1.4rem);
+  letter-spacing: 0.08em;
+  color: #3d4030;
+}
+
+.hero-title-std {
+  margin-top: 0.3rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
   text-transform: uppercase;
@@ -127,30 +133,12 @@ body {
   color: #3d4030;
 }
 
-.title-el-date {
-  margin-top: 0.75rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1rem, 3.6vw, 1.4rem);
-  letter-spacing: 0.08em;
-  color: #3d4030;
-}
-
-html.lang-el .title-el-script {
+html.lang-el .hero-title-script {
   font-family: "GFS Didot", Georgia, "Times New Roman", serif;
   font-style: italic;
   font-size: clamp(1.6rem, 6.5vw, 2.8rem);
   line-height: 1.15;
   padding: 0 0.5rem;
-}
-
-/* Show the title variant that matches the active language. */
-html.lang-el .text-overlay {
-  display: none;
-}
-
-html.lang-el .title-el {
-  display: flex;
-  animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
 }
 
 .calendar-cta {
@@ -305,11 +293,7 @@ html.ios .calendar-cta {
     padding: 2.5rem 2rem;
   }
 
-  .text-overlay {
-    width: min(80vw, 40rem);
-  }
-
-  .title-el {
+  .hero-title {
     width: min(80vw, 40rem);
   }
 
@@ -321,18 +305,13 @@ html.ios .calendar-cta {
 
 @media (prefers-reduced-motion: reduce) {
   .background,
-  .text-overlay,
-  .title-el,
+  .hero-title,
   .calendar-cta,
   .site-version,
   .lang-switch {
     animation: none;
     clip-path: none;
     opacity: 1;
-  }
-
-  html.lang-el .title-el {
-    animation: none;
   }
 
   .calendar-ios-link {
