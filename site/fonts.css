@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Parfumerie Script";
+  src:
+    local("Parfumerie Script Pro"),
+    local("Parfumerie Script"),
+    url("assets/fonts/parfumerie-script.woff2?v=__CACHE_VERSION__")
+      format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GFS Didot";
+  src: url("assets/fonts/gfs-didot-greek-400-normal.woff2?v=__CACHE_VERSION__")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0370-03FF;
+}
