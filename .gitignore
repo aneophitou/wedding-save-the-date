@@ -5,3 +5,6 @@ site/assets/fonts/source/
 __pycache__/
 .DS_Store
 Thumbs.db
+*.zip
+*.xlsx
+invites/
