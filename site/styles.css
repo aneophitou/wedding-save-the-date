@@ -173,16 +173,6 @@ body {
   color: #3d4030;
 }
 
-html.lang-el .title-names {
-  top: 63%;
-}
-
-html.lang-el .title-location,
-html.lang-el .title-followup {
-  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.18em;
-}
-
 .calendar-cta {
   display: flex;
   justify-content: center;
