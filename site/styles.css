@@ -125,12 +125,12 @@ body {
 
 .title-date {
   position: absolute;
-  top: 16.4%;
+  top: 15.8%;
   left: 0;
   right: 0;
   z-index: 0;
   margin: 0;
-  font-family: Georgia, "GFS Didot", "Times New Roman", serif;
+  font-family: "Kulachat Serif", Georgia, "Times New Roman", serif;
   font-weight: 400;
   font-size: 15.3cqw;
   line-height: 1;
@@ -141,7 +141,8 @@ body {
 
 .title-std {
   position: absolute;
-  top: 50%;
+  /* Line-box top from text.svg — script ascenders reach the date midpoint */
+  top: 33.8%;
   left: 0;
   right: 0;
   z-index: 1;
@@ -172,8 +173,8 @@ body {
 }
 
 html.lang-el .title-std {
-  top: 47%;
-  font-family: "Parfumerie Script", "GFS Didot", "Times New Roman", serif;
+  top: 30.8%;
+  font-family: "Parfumerie Script", "GFS Didot", cursive;
   font-size: 8.5cqw;
   letter-spacing: 0.02em;
   white-space: normal;
@@ -182,7 +183,7 @@ html.lang-el .title-std {
 
 html.lang-el .title-names {
   top: 72%;
-  font-family: "Simple Serenity Script", "GFS Didot", Georgia, serif;
+  font-family: "Simple Serenity Script", "GFS Didot", cursive;
   font-size: 5.2cqw;
 }
 

@@ -4,6 +4,7 @@
 Place source files in site/assets/fonts/source/ using these names:
   - Simple Serenity Script.ttf
   - parfumerie-script-old-style.otf
+  - Kulachat-Serif-Regular.otf
 
 Then run:
   python scripts/prepare-fonts.py
@@ -20,6 +21,7 @@ OUT_DIR = ROOT / "site" / "assets" / "fonts"
 MAPPINGS = {
     "Simple Serenity Script.ttf": "simple-serenity-script.woff2",
     "parfumerie-script-old-style.otf": "parfumerie-script.woff2",
+    "Kulachat-Serif-Regular.otf": "kulachat-serif-regular.woff2",
 }
 
 

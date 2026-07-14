@@ -47,6 +47,18 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Kulachat Serif";
+  src:
+    local("Kulachat Serif"),
+    local("KulachatSerif-Regular"),
+    url("assets/fonts/kulachat-serif-regular.woff2?v=__CACHE_VERSION__")
+      format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Greek glyphs for script/serif fallbacks when custom faces lack them */
 @font-face {
   font-family: "GFS Didot";
