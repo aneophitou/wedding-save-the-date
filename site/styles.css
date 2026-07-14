@@ -82,125 +82,105 @@ body {
   padding: 1.5rem 1rem;
 }
 
-/* Title artwork — proportions derived from the reference save-the-date design */
+/* Title block — vertical stack matching the reference artwork */
 .title-block {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   width: min(92vw, 34rem);
-  aspect-ratio: 524.25 / 246;
-  container-type: inline-size;
   color: #3d4030;
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
 }
 
-.title-aside {
+.title-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: clamp(4.5rem, 20vw, 7.5rem);
+}
+
+.title-date {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(3.6rem, 18vw, 7rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #d3d6c8;
+}
+
+.title-std {
   position: absolute;
-  top: 3.1%;
-  left: 8.2%;
-  max-width: 34%;
-  text-align: left;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0.5rem;
+  font-family: "Parfumerie Script", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 11vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: #7c3342;
+  white-space: nowrap;
+}
+
+.title-names {
+  margin: 1.1rem 0 0;
+  font-family: "Simple Serenity Script", "Segoe Script", cursive;
+  font-weight: 400;
+  font-size: clamp(1.15rem, 4.8vw, 1.75rem);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: #3d4030;
 }
 
 .title-location,
 .title-followup {
-  margin: 0;
+  margin: 0.85rem 0 0;
   font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
-  font-size: 1.95cqw;
-  line-height: 1.15;
+  font-size: clamp(0.62rem, 2.2vw, 0.82rem);
+  line-height: 1.2;
   letter-spacing: 0.34em;
   text-transform: uppercase;
   color: #3d4030;
 }
 
 .title-followup {
-  margin-top: 0.55em;
+  margin-top: 0.55rem;
+  font-size: clamp(0.55rem, 1.9vw, 0.72rem);
   letter-spacing: 0.22em;
 }
 
-.title-main {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.title-date {
-  position: absolute;
-  top: 16.4%;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 400;
-  font-size: 15.3cqw;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  text-align: center;
-  color: #d3d6c8;
-}
-
-.title-std {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  margin: 0;
-  font-family: "Parfumerie Script", "Brush Script MT", cursive;
-  font-weight: 400;
-  font-size: 14.2cqw;
-  line-height: 0.95;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: #7c3342;
-  white-space: nowrap;
-}
-
-.title-names {
-  position: absolute;
-  top: 75.6%;
-  left: 0;
-  right: 0;
-  margin: 0;
-  font-family: "Simple Serenity Script", "Segoe Script", cursive;
-  font-weight: 400;
-  font-size: 4.1cqw;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: #3d4030;
-}
-
 html.lang-el .title-std {
-  top: 47%;
   font-family: "Parfumerie Script", "GFS Didot", "Times New Roman", serif;
-  font-size: 8.5cqw;
+  font-size: clamp(1.5rem, 7vw, 3rem);
   letter-spacing: 0.02em;
   white-space: normal;
-  padding: 0 4%;
+  text-align: center;
 }
 
 html.lang-el .title-names {
-  top: 72%;
   font-family: "Simple Serenity Script", "GFS Didot", Georgia, serif;
-  font-size: 5.2cqw;
+  font-size: clamp(1.2rem, 5vw, 1.85rem);
 }
 
 html.lang-el .title-location,
 html.lang-el .title-followup {
-  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.18em;
-}
-
-html.lang-el .title-aside {
-  max-width: 38%;
 }
 
 .calendar-cta {
   display: flex;
   justify-content: center;
   width: min(72vw, 22rem);
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.9s both;
 }
 
@@ -354,7 +334,7 @@ html.ios .calendar-cta {
 
   .calendar-cta {
     width: min(50vw, 20rem);
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
   }
 }
 
