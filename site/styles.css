@@ -11,8 +11,8 @@ body {
 }
 
 body {
-  background-color: #fbfbf3;
-  color: #5c543f;
+  background-color: #f9f8f0;
+  color: #333333;
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -82,93 +82,103 @@ body {
   padding: 1.5rem 1rem;
 }
 
-/* Title block — vertical stack matching the reference artwork */
+/* Title block — proportions tuned to the reference artwork (524 × 246) */
 .title-block {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min(92vw, 32rem);
+  container-type: inline-size;
   text-align: center;
-  width: min(92vw, 34rem);
-  color: #3d4030;
+  color: #333333;
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
 }
 
 .title-hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  min-height: clamp(4.5rem, 20vw, 7.5rem);
+  height: 54cqw;
+  max-height: 12.75rem;
+  min-height: 6.75rem;
 }
 
 .title-date {
+  position: absolute;
+  top: 4%;
+  left: 0;
+  right: 0;
+  z-index: 0;
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "GFS Didot", "Times New Roman", serif;
   font-weight: 400;
-  font-size: clamp(3.6rem, 18vw, 7rem);
-  line-height: 1;
-  letter-spacing: 0.04em;
-  color: #d3d6c8;
+  font-size: max(3.25rem, 15.3cqw);
+  line-height: 0.92;
+  letter-spacing: 0.045em;
+  color: rgba(192, 194, 176, 0.78);
 }
 
 .title-std {
   position: absolute;
-  inset: 0;
+  top: 52%;
+  left: 0;
+  right: 0;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0;
-  padding: 0 0.5rem;
+  padding: 0 2%;
   font-family: "Parfumerie Script", "Brush Script MT", cursive;
   font-weight: 400;
-  font-size: clamp(2.4rem, 11vw, 4.8rem);
-  line-height: 0.95;
+  font-size: max(2.35rem, 14.2cqw);
+  line-height: 0.9;
   letter-spacing: 0.01em;
-  color: #7c3342;
+  color: #7a202c;
+  transform: translateY(-50%);
   white-space: nowrap;
 }
 
 .title-names {
-  margin: 1.1rem 0 0;
-  font-family: "Simple Serenity Script", "Segoe Script", cursive;
+  margin: max(0.65rem, 2.4cqw) 0 0;
+  font-family: Georgia, "GFS Didot", "Times New Roman", serif;
   font-weight: 400;
-  font-size: clamp(1.15rem, 4.8vw, 1.75rem);
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: #3d4030;
+  font-size: max(1.05rem, 4.1cqw);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: #333333;
 }
 
 .title-location,
 .title-followup {
-  margin: 0.85rem 0 0;
+  margin: 0;
   font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
-  font-size: clamp(0.62rem, 2.2vw, 0.82rem);
-  line-height: 1.2;
+  font-size: max(0.58rem, 1.95cqw);
+  line-height: 1.15;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: #3d4030;
+  color: #777777;
+}
+
+.title-location {
+  margin-top: max(0.85rem, 3.8cqw);
 }
 
 .title-followup {
-  margin-top: 0.55rem;
-  font-size: clamp(0.55rem, 1.9vw, 0.72rem);
+  margin-top: max(0.3rem, 1.1cqw);
+  font-size: max(0.52rem, 1.7cqw);
   letter-spacing: 0.22em;
 }
 
 html.lang-el .title-std {
+  top: 50%;
   font-family: "Parfumerie Script", "GFS Didot", "Times New Roman", serif;
-  font-size: clamp(1.5rem, 7vw, 3rem);
-  letter-spacing: 0.02em;
+  font-size: max(1.35rem, 8.8cqw);
+  letter-spacing: 0.015em;
   white-space: normal;
-  text-align: center;
+  line-height: 0.95;
 }
 
 html.lang-el .title-names {
-  font-family: "Simple Serenity Script", "GFS Didot", Georgia, serif;
-  font-size: clamp(1.2rem, 5vw, 1.85rem);
+  margin-top: max(0.75rem, 3cqw);
+  font-size: max(1.1rem, 4.6cqw);
 }
 
 html.lang-el .title-location,
@@ -180,7 +190,7 @@ html.lang-el .title-followup {
   display: flex;
   justify-content: center;
   width: min(72vw, 22rem);
-  margin-top: 1.5rem;
+  margin-top: max(1.25rem, 4.2cqw);
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.9s both;
 }
 
@@ -329,7 +339,7 @@ html.ios .calendar-cta {
   }
 
   .title-block {
-    width: min(80vw, 40rem);
+    width: min(80vw, 36rem);
   }
 
   .calendar-cta {
