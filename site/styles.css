@@ -141,6 +141,17 @@ html.lang-el .title-el {
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.9s both;
 }
 
+/* Calendar dropdown modal host (rendered outside the web component) */
+#atcb-bgoverlay {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background-color: transparent !important;
+}
+
+#atcb-reference {
+  display: none !important;
+}
+
 .calendar-ios-link {
   display: none;
   align-items: center;

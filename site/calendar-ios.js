@@ -1,6 +1,6 @@
-var ICS_HTTPS_URL = 'https://wedding.neophitou.com/AndreasAndNikoletaWedding.ics';
+var ICS_HTTPS_URL = 'https://savethedate.neophitou.com/AndreasAndNikoletaWedding.ics';
 var ICS_SAFARI_URL =
-  'x-safari-https://wedding.neophitou.com/AndreasAndNikoletaWedding.ics';
+  'x-safari-https://savethedate.neophitou.com/AndreasAndNikoletaWedding.ics';
 
 function isSafariIos() {
   var ua = navigator.userAgent;
