@@ -82,63 +82,118 @@ body {
   padding: 1.5rem 1rem;
 }
 
-.text-overlay {
-  display: none;
-}
-
-/* Hero title — layout matches text-no-button.svg (y: names 119, script 144, date 186, std 194) */
-.hero-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+/* Title artwork — proportions derived from the reference save-the-date design */
+.title-block {
+  position: relative;
   width: min(92vw, 34rem);
+  aspect-ratio: 524.25 / 246;
+  container-type: inline-size;
+  color: #3d4030;
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
 }
 
-.hero-title-names {
+.title-aside {
+  position: absolute;
+  top: 3.1%;
+  left: 8.2%;
+  max-width: 34%;
+  text-align: left;
+}
+
+.title-location,
+.title-followup {
+  margin: 0;
+  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.95cqw;
+  line-height: 1.15;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #3d4030;
+}
+
+.title-followup {
+  margin-top: 0.55em;
+  letter-spacing: 0.22em;
+}
+
+.title-main {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.title-date {
+  position: absolute;
+  top: 16.4%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
-  font-size: clamp(2.1rem, 9vw, 4rem);
-  line-height: 1.1;
-  letter-spacing: 0.02em;
+  font-size: 15.3cqw;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-align: center;
   color: #d3d6c8;
 }
 
-.hero-title-script {
-  margin-top: 0.55rem;
-  font-family: "Parfumerie Script", "Segoe Script", "Brush Script MT", cursive;
+.title-std {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0;
+  font-family: "Parfumerie Script", "Brush Script MT", cursive;
   font-weight: 400;
-  font-size: clamp(2rem, 8.5vw, 3.6rem);
-  line-height: 1;
+  font-size: 14.2cqw;
+  line-height: 0.95;
   letter-spacing: 0.01em;
+  text-align: center;
   color: #7c3342;
+  white-space: nowrap;
 }
 
-.hero-title-date {
-  margin-top: 1.15rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1rem, 3.6vw, 1.4rem);
-  letter-spacing: 0.08em;
+.title-names {
+  position: absolute;
+  top: 75.6%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-family: "Simple Serenity Script", "Segoe Script", cursive;
+  font-weight: 400;
+  font-size: 4.1cqw;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-align: center;
   color: #3d4030;
 }
 
-.hero-title-std {
-  margin-top: 0.3rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: clamp(0.7rem, 2.6vw, 1rem);
-  letter-spacing: 0.36em;
-  color: #3d4030;
+html.lang-el .title-std {
+  top: 47%;
+  font-family: "Parfumerie Script", "GFS Didot", "Times New Roman", serif;
+  font-size: 8.5cqw;
+  letter-spacing: 0.02em;
+  white-space: normal;
+  padding: 0 4%;
 }
 
-html.lang-el .hero-title-script {
-  font-family: "GFS Didot", Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-size: clamp(1.6rem, 6.5vw, 2.8rem);
-  line-height: 1.15;
-  padding: 0 0.5rem;
+html.lang-el .title-names {
+  top: 72%;
+  font-family: "Simple Serenity Script", "GFS Didot", Georgia, serif;
+  font-size: 5.2cqw;
+}
+
+html.lang-el .title-location,
+html.lang-el .title-followup {
+  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.18em;
+}
+
+html.lang-el .title-aside {
+  max-width: 38%;
 }
 
 .calendar-cta {
@@ -179,7 +234,7 @@ html.lang-el .hero-title-script {
   );
   backdrop-filter: blur(1px);
   color: #bcb5a7;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.22em;
@@ -293,7 +348,7 @@ html.ios .calendar-cta {
     padding: 2.5rem 2rem;
   }
 
-  .hero-title {
+  .title-block {
     width: min(80vw, 40rem);
   }
 
@@ -305,7 +360,7 @@ html.ios .calendar-cta {
 
 @media (prefers-reduced-motion: reduce) {
   .background,
-  .hero-title,
+  .title-block,
   .calendar-cta,
   .site-version,
   .lang-switch {
