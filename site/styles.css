@@ -82,7 +82,7 @@ body {
   padding: 1.5rem 1rem;
 }
 
-/* Title artwork — positions/sizes from site/assets/text.svg (524.25 × 246) */
+/* Title artwork — type sizes from 524.25px reference artboard */
 .title-block {
   position: relative;
   width: min(92vw, 34rem);
@@ -90,6 +90,7 @@ body {
   container-type: inline-size;
   color: #3d4030;
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
+  --title-artboard: 524.25;
 }
 
 .title-aside {
@@ -103,9 +104,9 @@ body {
 .title-location,
 .title-followup {
   margin: 0;
-  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
-  font-size: 1.95cqw;
+  font-size: calc(8 / var(--title-artboard) * 100cqw);
   line-height: 1.15;
   letter-spacing: 0.34em;
   text-transform: uppercase;
@@ -113,7 +114,7 @@ body {
 }
 
 .title-followup {
-  margin-top: 2.15cqw;
+  margin-top: calc(11 / var(--title-artboard) * 100cqw);
   letter-spacing: 0.22em;
 }
 
@@ -130,9 +131,9 @@ body {
   right: 0;
   z-index: 0;
   margin: 0;
-  font-family: "Noto Serif Display", Georgia, "Times New Roman", serif;
+  font-family: "Simple Serenity Serif", Georgia, "Times New Roman", serif;
   font-weight: 400;
-  font-size: 15.3cqw;
+  font-size: calc(100 / var(--title-artboard) * 100cqw);
   line-height: 1;
   letter-spacing: 0.04em;
   text-align: center;
@@ -147,9 +148,9 @@ body {
   right: 0;
   z-index: 1;
   margin: 0;
-  font-family: "Parfumerie Script", "Brush Script MT", cursive;
+  font-family: "Sloop Script Pro", "Brush Script MT", cursive;
   font-weight: 400;
-  font-size: 14.2cqw;
+  font-size: calc(80 / var(--title-artboard) * 100cqw);
   line-height: 0.95;
   letter-spacing: 0.01em;
   text-align: center;
@@ -164,31 +165,21 @@ body {
   right: 0;
   margin: 0;
   font-family: "Noto Serif Display", Georgia, "Times New Roman", serif;
-  font-weight: 400;
-  font-size: 4.2cqw;
+  font-weight: 500;
+  font-size: calc(18 / var(--title-artboard) * 100cqw);
   line-height: 1;
   letter-spacing: 0.03em;
   text-align: center;
   color: #3d4030;
 }
 
-html.lang-el .title-std {
-  top: 30.8%;
-  font-family: "Parfumerie Script", "GFS Didot", cursive;
-  font-size: 8.5cqw;
-  letter-spacing: 0.02em;
-  white-space: normal;
-  padding: 0 4%;
-}
-
 html.lang-el .title-names {
   top: 63%;
-  font-size: 4.8cqw;
 }
 
 html.lang-el .title-location,
 html.lang-el .title-followup {
-  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.18em;
 }
 
@@ -230,8 +221,8 @@ html.lang-el .title-followup {
   );
   backdrop-filter: blur(1px);
   color: #bcb5a7;
-  font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.68rem;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: calc(8 / 524.25 * min(92vw, 34rem));
   font-weight: 300;
   letter-spacing: 0.22em;
   text-decoration: none;

@@ -4,6 +4,7 @@
 Place source files in site/assets/fonts/source/ using these names:
   - Simple Serenity Script.ttf
   - Simple Serenity Serif.ttf
+  - Sloop-ScriptThree.ttf
   - parfumerie-script-old-style.otf
 
 Noto Serif Display date numerals are generated separately as a woff2
@@ -24,6 +25,7 @@ OUT_DIR = ROOT / "site" / "assets" / "fonts"
 MAPPINGS = {
     "Simple Serenity Script.ttf": "simple-serenity-script.woff2",
     "Simple Serenity Serif.ttf": "simple-serenity-serif.woff2",
+    "Sloop-ScriptThree.ttf": "sloop-script-three.woff2",
     "parfumerie-script-old-style.otf": "parfumerie-script.woff2",
 }
 
