@@ -231,6 +231,55 @@ html.ios .calendar-cta {
   animation: fade-in 1.5s ease 1.6s both;
 }
 
+.lang-switch {
+  position: fixed;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(188, 181, 167, 0.45);
+  border-radius: 999px;
+  background-color: rgba(251, 251, 243, 0.72);
+  backdrop-filter: blur(2px);
+  animation: fade-in 1.2s ease 0.8s both;
+}
+
+.lang-switch-btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(92, 84, 63, 0.55);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.25s ease;
+}
+
+.lang-switch-btn:hover,
+.lang-switch-btn:focus-visible {
+  color: rgba(92, 84, 63, 0.85);
+  outline: none;
+}
+
+.lang-switch-btn[aria-pressed="true"] {
+  color: #5c543f;
+  font-weight: 500;
+}
+
+.lang-switch-sep {
+  color: rgba(92, 84, 63, 0.28);
+  font-size: 0.62rem;
+  user-select: none;
+}
+
 @media (min-width: 768px) {
   .content {
     padding: 2.5rem 2rem;
@@ -251,7 +300,8 @@ html.ios .calendar-cta {
   .text-overlay,
   .title-el,
   .calendar-cta,
-  .site-version {
+  .site-version,
+  .lang-switch {
     animation: none;
     clip-path: none;
     opacity: 1;
@@ -262,6 +312,10 @@ html.ios .calendar-cta {
   }
 
   .calendar-ios-link {
+    transition: none;
+  }
+
+  .lang-switch-btn {
     transition: none;
   }
 

@@ -22,9 +22,9 @@
       <img src="assets/text-no-button.svg?v=__CACHE_VERSION__" alt="Andreas and Nikoleta — Save the Date, 11 July 2027" class="text-overlay" decoding="async">
 
       <div class="title-el">
-        <span class="title-el-names">Αντρέας &amp; Νικολέτα</span>
-        <span class="title-el-std">Κρατήστε την Ημερομηνία</span>
-        <span class="title-el-date">11 Ιουλίου 2027</span>
+        <span class="title-el-names" data-i18n="names">Andreas &amp; Nikoleta</span>
+        <span class="title-el-std" data-i18n="saveTheDate">Save the Date</span>
+        <span class="title-el-date" data-i18n="date">11 July 2027</span>
       </div>
 
       <section class="calendar-cta" aria-label="Add wedding to your calendar">
@@ -60,7 +60,12 @@
         ></add-to-calendar-button>
       </section>
     </div>
-    <p class="site-version" aria-label="Site version">v1.9.0 · __CACHE_VERSION__</p>
+    <p class="site-version" aria-label="Site version">v1.9.1 · __CACHE_VERSION__</p>
+    <nav class="lang-switch" aria-label="Language">
+      <button type="button" class="lang-switch-btn" data-lang-switch="en" aria-pressed="true" aria-label="English">EN</button>
+      <span class="lang-switch-sep" aria-hidden="true">|</span>
+      <button type="button" class="lang-switch-btn" data-lang-switch="el" aria-pressed="false" aria-label="Greek">ΕΛ</button>
+    </nav>
   </main>
   <script src="calendar-ios.js?v=__CACHE_VERSION__" defer></script>
 </body>
