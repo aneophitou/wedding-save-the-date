@@ -2,9 +2,8 @@
 """Convert licensed OTF/TTF wedding fonts to self-hosted woff2 files.
 
 Place source files in site/assets/fonts/source/ using these names:
-  - Simple-Serenity-Script.otf
-  - Parfumerie-Script.otf
-  - Kulachat-Serif-Regular.otf
+  - Simple Serenity Script.ttf
+  - parfumerie-script-old-style.otf
 
 Then run:
   python scripts/prepare-fonts.py
@@ -19,16 +18,27 @@ SOURCE_DIR = ROOT / "site" / "assets" / "fonts" / "source"
 OUT_DIR = ROOT / "site" / "assets" / "fonts"
 
 MAPPINGS = {
-    "Simple-Serenity-Script.otf": "simple-serenity-script.woff2",
-    "Parfumerie-Script.otf": "parfumerie-script.woff2",
-    "Kulachat-Serif-Regular.otf": "kulachat-serif-regular.woff2",
+    "Simple Serenity Script.ttf": "simple-serenity-script.woff2",
+    "parfumerie-script-old-style.otf": "parfumerie-script.woff2",
 }
+
+
+def resolve_source(source_name: str) -> Path | None:
+    base = SOURCE_DIR / source_name
+    if base.exists():
+        return base
+    stem = Path(source_name).stem
+    for ext in (".otf", ".ttf", ".OTF", ".TTF"):
+        candidate = SOURCE_DIR / f"{stem}{ext}"
+        if candidate.exists():
+            return candidate
+    return None
 
 
 def convert(src: Path, dest: Path) -> None:
     try:
         from fontTools.ttLib import TTFont
-        from fontTools.woff2 import compress
+        from fontTools.ttLib.woff2 import compress
     except ImportError:
         print("Install fonttools: pip install fonttools brotli", file=sys.stderr)
         sys.exit(1)
@@ -53,14 +63,10 @@ def main() -> None:
 
     converted = 0
     for source_name, out_name in MAPPINGS.items():
-        src = SOURCE_DIR / source_name
-        if not src.exists():
-            alt = src.with_suffix(".ttf")
-            if alt.exists():
-                src = alt
-            else:
-                print(f"Skip (missing): {source_name}")
-                continue
+        src = resolve_source(source_name)
+        if src is None:
+            print(f"Skip (missing): {source_name}")
+            continue
         convert(src, OUT_DIR / out_name)
         converted += 1
 
