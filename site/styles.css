@@ -94,10 +94,10 @@ body {
 
 .title-aside {
   position: absolute;
-  top: 78.86%;
-  left: 33.02%;
-  max-width: 34%;
-  text-align: left;
+  top: 83%;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .title-location,
@@ -130,7 +130,7 @@ body {
   right: 0;
   z-index: 0;
   margin: 0;
-  font-family: "Kulachat Serif", Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Display", Georgia, "Times New Roman", serif;
   font-weight: 400;
   font-size: 15.3cqw;
   line-height: 1;
@@ -159,13 +159,13 @@ body {
 
 .title-names {
   position: absolute;
-  top: 75.6%;
+  top: 66%;
   left: 0;
   right: 0;
   margin: 0;
-  font-family: "Simple Serenity Script", "Segoe Script", cursive;
+  font-family: "Noto Serif Display", Georgia, "Times New Roman", serif;
   font-weight: 400;
-  font-size: 4.1cqw;
+  font-size: 4.2cqw;
   line-height: 1;
   letter-spacing: 0.03em;
   text-align: center;
@@ -182,19 +182,14 @@ html.lang-el .title-std {
 }
 
 html.lang-el .title-names {
-  top: 72%;
-  font-family: "Simple Serenity Script", "GFS Didot", cursive;
-  font-size: 5.2cqw;
+  top: 63%;
+  font-size: 4.8cqw;
 }
 
 html.lang-el .title-location,
 html.lang-el .title-followup {
   font-family: "Quicksand", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.18em;
-}
-
-html.lang-el .title-aside {
-  max-width: 38%;
 }
 
 .calendar-cta {

@@ -25,11 +25,17 @@
 
 @font-face {
   font-family: "Simple Serenity Script";
-  src:
-    local("Simple Serenity Script"),
-    local("SimpleSerenity-Script"),
-    url("assets/fonts/simple-serenity-script.woff2?v=__CACHE_VERSION__")
-      format("woff2");
+  src: url("assets/fonts/simple-serenity-script.woff2?v=__CACHE_VERSION__")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Simple Serenity Serif";
+  src: url("assets/fonts/simple-serenity-serif.woff2?v=__CACHE_VERSION__")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -37,23 +43,17 @@
 
 @font-face {
   font-family: "Parfumerie Script";
-  src:
-    local("Parfumerie Script Pro"),
-    local("Parfumerie Script"),
-    url("assets/fonts/parfumerie-script.woff2?v=__CACHE_VERSION__")
-      format("woff2");
+  src: url("assets/fonts/parfumerie-script.woff2?v=__CACHE_VERSION__")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Kulachat Serif";
-  src:
-    local("Kulachat Serif"),
-    local("KulachatSerif-Regular"),
-    url("assets/fonts/kulachat-serif-regular.woff2?v=__CACHE_VERSION__")
-      format("woff2");
+  font-family: "Noto Serif Display";
+  src: url("assets/fonts/noto-serif-display-regular.woff2?v=__CACHE_VERSION__")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
