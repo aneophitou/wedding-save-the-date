@@ -28,7 +28,10 @@
   font-family: var(--font);
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  font-size: calc(8 / 524.25 * min(92vw, 34rem));
+  font-size: calc(
+    8 * var(--title-type-scale, 1) / var(--title-artboard, 524.25) *
+      var(--title-block-width, min(92vw, 34rem))
+  );
   font-weight: 300;
   background-image: linear-gradient(
     135deg,

@@ -55,6 +55,9 @@ body {
   min-height: 100dvh;
   width: 100%;
   overflow: hidden;
+  --title-artboard: 524.25;
+  --title-type-scale: 1.2;
+  --title-block-width: min(92vw, 34rem);
 }
 
 .background {
@@ -85,12 +88,11 @@ body {
 /* Title artwork — type sizes from 524.25px reference artboard */
 .title-block {
   position: relative;
-  width: min(92vw, 34rem);
+  width: var(--title-block-width);
   aspect-ratio: 524.25 / 246;
   container-type: inline-size;
   color: #3d4030;
   animation: fade-up 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
-  --title-artboard: 524.25;
 }
 
 .title-aside {
@@ -106,7 +108,9 @@ body {
   margin: 0;
   font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
-  font-size: calc(8 / var(--title-artboard) * 100cqw);
+  font-size: calc(
+    8 * var(--title-type-scale) / var(--title-artboard) * 100cqw
+  );
   line-height: 1.15;
   letter-spacing: 0.34em;
   text-transform: uppercase;
@@ -114,7 +118,9 @@ body {
 }
 
 .title-followup {
-  margin-top: calc(11 / var(--title-artboard) * 100cqw);
+  margin-top: calc(
+    11 * var(--title-type-scale) / var(--title-artboard) * 100cqw
+  );
   letter-spacing: 0.22em;
 }
 
@@ -133,7 +139,9 @@ body {
   margin: 0;
   font-family: "Simple Serenity Serif", Georgia, "Times New Roman", serif;
   font-weight: 400;
-  font-size: calc(100 / var(--title-artboard) * 100cqw);
+  font-size: calc(
+    100 * var(--title-type-scale) / var(--title-artboard) * 100cqw
+  );
   line-height: 1;
   letter-spacing: 0.04em;
   text-align: center;
@@ -150,7 +158,9 @@ body {
   margin: 0;
   font-family: "Sloop Script Pro", "Brush Script MT", cursive;
   font-weight: 400;
-  font-size: calc(80 / var(--title-artboard) * 100cqw);
+  font-size: calc(
+    80 * var(--title-type-scale) / var(--title-artboard) * 100cqw
+  );
   line-height: 0.95;
   letter-spacing: 0.01em;
   text-align: center;
@@ -166,7 +176,9 @@ body {
   margin: 0;
   font-family: "Noto Serif Display", Georgia, "Times New Roman", serif;
   font-weight: 500;
-  font-size: calc(18 / var(--title-artboard) * 100cqw);
+  font-size: calc(
+    18 * var(--title-type-scale) / var(--title-artboard) * 100cqw
+  );
   line-height: 1;
   letter-spacing: 0.03em;
   text-align: center;
@@ -212,7 +224,9 @@ body {
   backdrop-filter: blur(1px);
   color: #bcb5a7;
   font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: calc(8 / 524.25 * min(92vw, 34rem));
+  font-size: calc(
+    8 * var(--title-type-scale) / var(--title-artboard) * var(--title-block-width)
+  );
   font-weight: 300;
   letter-spacing: 0.22em;
   text-decoration: none;
@@ -325,8 +339,8 @@ html.ios .calendar-cta {
     padding: 2.5rem 2rem;
   }
 
-  .title-block {
-    width: min(80vw, 40rem);
+  .save-the-date {
+    --title-block-width: min(80vw, 40rem);
   }
 
   .calendar-cta {
