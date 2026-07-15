@@ -45,6 +45,10 @@
     transform 0.2s ease, box-shadow 0.35s ease;
 }
 
+:host-context(html.lang-el) .atcb-button {
+  text-transform: none;
+}
+
 .atcb-button:not([disabled]):hover {
   transform: translateY(-1px);
 }

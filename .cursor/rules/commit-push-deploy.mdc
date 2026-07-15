@@ -1,0 +1,16 @@
+---
+description: After each change, commit, push, and deploy this wedding save-the-date site
+alwaysApply: true
+---
+
+# Commit, push, deploy
+
+For this repository, after completing each user-requested change:
+
+1. Commit only files related to the change (exclude unrelated drift such as `package-lock.json` unless intentionally updated).
+2. Push to `origin/master`.
+3. Confirm the GitHub Pages deploy workflow succeeds.
+
+Live site: **https://savethedate.neophitou.com**
+
+Do not skip commit/push/deploy unless the user explicitly asks to hold changes locally.

@@ -124,6 +124,12 @@ body {
   letter-spacing: 0.22em;
 }
 
+html.lang-el .title-location,
+html.lang-el .title-followup,
+html.lang-el .calendar-ios-link {
+  text-transform: none;
+}
+
 .title-main {
   position: absolute;
   inset: 0;
