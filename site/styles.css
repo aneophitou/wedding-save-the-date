@@ -276,6 +276,7 @@ html.ios .calendar-cta {
 }
 
 .site-version {
+  display: none;
   position: fixed;
   right: 0.75rem;
   bottom: 0.6rem;
