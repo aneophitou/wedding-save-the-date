@@ -24,12 +24,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:wedding-andreas-nikoleta-20270711@neophitou.com
-DTSTAMP:20260710T130000Z
+DTSTAMP:20261011T130000Z
 DTSTART;TZID=Europe/Nicosia:20270711T180000
 DTEND;TZID=Europe/Nicosia:20270712T020000
 SUMMARY:Andreas and Nikoleta's Wedding
-DESCRIPTION:Ceremony at the Church of Archangelos Michael in Archangelos.\nReception at Ktima Koushioumis.
-LOCATION:Archangelou Michael
 STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
