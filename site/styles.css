@@ -97,7 +97,7 @@ body {
 
 .title-aside {
   position: absolute;
-  top: 83%;
+  top: 86%;
   left: 0;
   right: 0;
   text-align: center;
@@ -109,7 +109,7 @@ body {
   font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
   font-size: calc(
-    8 * var(--title-type-scale) / var(--title-artboard) * 100cqw
+    11 * var(--title-type-scale) / var(--title-artboard) * 100cqw
   );
   line-height: 1.15;
   letter-spacing: 0.34em;
@@ -176,14 +176,14 @@ html.lang-el .calendar-ios-link {
 
 .title-names {
   position: absolute;
-  top: 66%;
+  top: 70%;
   left: 0;
   right: 0;
   margin: 0;
   font-family: "Noto Serif Display", Georgia, "Times New Roman", serif;
   font-weight: 500;
   font-size: calc(
-    18 * var(--title-type-scale) / var(--title-artboard) * 100cqw
+    23 * var(--title-type-scale) / var(--title-artboard) * 100cqw
   );
   line-height: 1;
   letter-spacing: 0.03em;
@@ -231,7 +231,7 @@ html.lang-el .calendar-ios-link {
   color: #bcb5a7;
   font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: calc(
-    8 * var(--title-type-scale) / var(--title-artboard) * var(--title-block-width)
+    11 * var(--title-type-scale) / var(--title-artboard) * var(--title-block-width)
   );
   font-weight: 300;
   letter-spacing: 0.22em;
@@ -351,7 +351,7 @@ html.ios .calendar-cta {
 
   .calendar-cta {
     width: min(50vw, 20rem);
-    margin-top: 1.5rem;
+    margin-top: 1.9rem;
   }
 }
 
